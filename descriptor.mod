@@ -11,4 +11,6 @@ tags={
 	"Utilities"
 }
 name="Offshore Bank Account"
-supported_version="1.16.9"
+picture="thumbnail.png"
+supported_version="1.16.*"
+remote_file_id="3650055147"
