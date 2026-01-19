@@ -1,0 +1,44 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_scripted_gui_window_background"  
+		textureFile = "/gfx/interface/scripted_gui_graphics/scripted_gui_background.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_scripted_gui_window_background_small"
+		textureFile = "/gfx/interface/scripted_gui_graphics/scripted_gui_background_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bank_icon_swi_bg"
+		textureFile = "/gfx/interface/scripted_gui_graphics/empty-bank.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bank_icon_swi"
+		textureFile = "/gfx/interface/scripted_gui_graphics/bank-icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_close_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/close_button.dds"
+	}
+	
+	progressbartype = {
+		name = "GFX_civ_bonus_progress_bar"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 246 116 22 1 }
+		textureFile1 = "gfx/interface/scripted_gui_graphics/production_progressbar_frame_bg.dds"
+		textureFile2 = "gfx/interface/scripted_gui_graphics/production_progressbar_frame.dds"
+		size = { x = 600 y = 44	}
+		effectFile = "gfx/FX/progress.lua"
+		steps = 300
+		horizontal = yes
+    }
+	
+		spriteType = {
+		name = "GFX_bank_category"
+		textureFile = "/gfx/interface/scripted_gui_graphics/tiled_faction_header.dds"
+	}
+}

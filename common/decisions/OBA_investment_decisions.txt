@@ -1,0 +1,169 @@
+OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE INVESTOR NATION-- FIXED
+
+	invest_1_civ = {
+      icon = GFX_decision_generic_construction
+      available = {
+			any_controlled_state = {
+				industrial_complex > 0
+			}
+			
+			if = {
+				limit = {
+					has_global_flag = OBA_same_ideo_investment
+				}
+				has_government = SWI
+			}
+			
+			NOT = {
+				has_country_flag = OBA_stole_civs
+			}
+		}
+		
+	  fixed_random_seed = no
+      cost = 5
+	  days_remove = 5
+      complete_effect = {
+			add_to_variable = { 
+				var = offshore_civs 
+				value = 1 
+			}
+			custom_effect_tooltip = invest_fac_tt
+			SWI = {
+				add_to_variable = { 
+				var = total_offshore_civs 
+				value = 1 
+				}
+			}
+        
+			OBA_scale_factories = yes
+			force_update_dynamic_modifier = yes
+			#Remove from investor
+			ROOT = {
+				random_owned_state = {
+					limit = {
+					industrial_complex > 0
+					}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+					}
+				}
+			
+				# Give offmap civ
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+		}
+	}
+	  
+	
+	
+	invest_5_civ = {
+      icon = GFX_decision_generic_construction
+      available = {
+		  any_controlled_state = {
+				industrial_complex > 4
+			}
+			
+			if = {
+				limit = {
+					has_global_flag = OBA_same_ideo_investment
+				}
+				has_government = SWI
+			}
+			
+			NOT = {
+				has_country_flag = OBA_stole_civs
+			}
+		}
+	  fixed_random_seed = no
+      cost = 25
+	  days_remove = 10
+      complete_effect = {
+			add_to_variable = { 
+				var = offshore_civs 
+				value = 5
+			}
+			custom_effect_tooltip = invest_fac_tt
+			SWI = {
+				add_to_variable = { 
+				var = total_offshore_civs 
+				value = 5
+			    }
+			}
+			
+			OBA_scale_factories = yes
+			force_update_dynamic_modifier = yes
+			#Remove from investor
+			ROOT = {
+				random_owned_state = {
+					limit = {
+					industrial_complex > 4
+					}
+				remove_building = {
+					type = industrial_complex
+					level = 5
+				}
+				}
+				# Give offmap civ 
+				add_offsite_building = { type = industrial_complex level = 5 }
+			}
+		}
+	}
+	  
+	
+	
+	invest_10_civ = {
+      icon = GFX_decision_generic_construction
+      available = {
+		  any_controlled_state = {
+				industrial_complex > 9
+			}
+			
+			if = {
+				limit = {
+					has_global_flag = OBA_same_ideo_investment
+				}
+				has_government = SWI
+			}
+			
+			NOT = {
+				has_country_flag = OBA_stole_civs
+			}
+		}
+	  fixed_random_seed = no
+      cost = 50
+	  days_remove = 15
+      complete_effect = {
+			add_to_variable = { 
+				var = offshore_civs 
+				value = 10 
+			}
+			custom_effect_tooltip = invest_fac_tt
+			SWI = {
+				add_to_variable = { 
+				var = total_offshore_civs 
+				value = 10 
+				}
+			}
+			OBA_scale_factories = yes
+			force_update_dynamic_modifier = yes
+	
+			#Remove from investor
+			ROOT = {
+				random_owned_state = {
+					limit = {
+					industrial_complex > 9
+					}
+				 remove_building = {
+					type = industrial_complex
+					level = 10
+				  }
+				}
+				# Give offmap civ 
+				add_offsite_building = { type = industrial_complex level = 10 }
+			}
+		}
+	}
+	  
+	
+}

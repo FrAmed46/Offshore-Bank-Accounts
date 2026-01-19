@@ -1,0 +1,191 @@
+add_namespace = OBA_event
+
+country_event = {
+	id = OBA_event.1
+	title = OBA_event.1.t
+	desc = OBA_event.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OBA_event.1.a
+		SWI = { country_event = OBA_event.2 }
+		swap_ideas = {
+			remove_idea = export_focus
+			add_idea = free_trade
+		}
+		swap_ideas = {
+			remove_idea = limited_exports
+			add_idea = free_trade
+		}
+		swap_ideas = {
+			remove_idea = closed_economy
+			add_idea = free_trade
+		}
+		add_opinion_modifier = {
+			target = SWI
+			modifier = OBA_forced_demand
+		}
+		
+		ai_chance = {
+			base = 20 ## less base chance to accept
+			
+			modifier = {
+				has_government = democratic
+				add = 30
+			}  ## Democracies are more open to trade demands
+			
+			
+			modifier = {
+				has_political_power < 50
+				add = 10 ## no pp = we must say yes
+			}
+		}
+	}
+	
+	option = {
+		name = OBA_event.1.b
+		SWI = { country_event = OBA_event.3 }
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = SWI
+			modifier = OBA_demand_rebuffed
+		}
+		reverse_add_opinion_modifier = {
+			target = SWI
+			modifier = OBA_demands_rejected
+		}
+		add_threat = 1
+		
+		ai_chance = {
+			base = 35 ## more likely to say no as base
+			
+			modifier = {
+				has_government = communism ## Non democratic ideologies won't care as much
+				add = 10
+			}
+			modifier = {
+				has_government = fascism ## Non democratic ideologies won't care as much
+				add = 10
+			}
+		    modifier = { tag = GER factor = 30 } ## Germany says big nein.
+			modifier = { is_major = yes add = 10 } ## Majors won't be swayed so easily
+		}
+	}
+}
+
+country_event = {
+	id = OBA_event.2
+	title = OBA_event.2.t
+	desc = OBA_event.2.desc
+	
+	is_triggered_only = yes
+	
+		option = {
+		name = OBA_event.2.a	
+	}
+}
+
+country_event = {
+	id = OBA_event.3
+	title = OBA_event.3.t
+	desc = OBA_event.3.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OBA_event.3.a	
+	}
+}
+
+
+country_event = {
+	id = OBA_event.4
+	title = OBA_event.4.t
+	desc = OBA_event.4.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OBA_event.4.a
+	    
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = 0.1
+		###add_timed_idea = {
+		#	idea = OBA_civs_seized
+		#	days = 30
+		#}
+		
+		ai_chance = {
+			base = 35 ## More likely that the ai will cry about it
+			
+			modifier = {  ## Lessened chance to invade if they have almnost nothing in swizterland
+				check_variable = {
+					offshore_civs < 4
+				}
+				add = 10
+			}
+			
+			modifier = {
+				strength_ratio = {  ## No chance if they are that weak lmao
+					tag = SWI
+					ratio < 0.5
+				}
+				add = 15 
+			}
+		}
+	}
+	
+	option = {
+		name = OBA_event.4.b
+		
+		add_political_power = -25
+		add_stability = -0.025
+		add_war_support = 0.2
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SWI
+			expire = 60
+		}
+		
+		ai_chance = {
+			base = 10 ## Less likely switzerland has to do a ragnarok
+			
+			modifier = {
+				is_neighbor_of = SWI ## Neighbors will want to pounce 100%
+				Factor = 4
+			}
+			
+			modifier = {  ## Increased chance to invade based on civs invested
+				check_variable = {
+					offshore_civs > 4
+				}
+				add = 10
+			}
+			
+			modifier = {
+				check_variable = {
+					offshore_civs > 14
+				}
+				add = 10
+			}
+			
+			modifier = {
+				check_variable = {
+					offshore_civs > 24
+				}
+				add = 10
+			}
+			
+			modifier = {
+				strength_ratio = {
+					tag = SWI
+					ratio > 0.8
+				}
+				add = 15 
+			}
+			
+			modifier = { is_major = yes add = 15 } ## Majors want in
+		}
+	}

@@ -1,0 +1,178 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "bank_icon_swi"
+		position = { x = 1028 y = 165}	
+		size = { width = 64 height= 64 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {  ## This was a pain in the ass, i just dont want a background
+			name = "bank_icon_swi_bg"		
+			quadTextureSprite ="GFX_bank_icon_swi_bg"
+		}
+
+		ButtonType ={  ## The open the bank gui button
+			name ="bank_button_swi"
+			spriteType = "GFX_bank_icon_swi"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}	
+	}
+	
+	containerWindowType = {
+		name = "bank_ui_swi"
+		position = { x = 0 y = 0}	
+		size = { width = 800 height= 650 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = { ## Just the background
+			name = "Background"		
+			quadTextureSprite ="GFX_scripted_gui_window_background"
+		}
+
+		buttonType ={ ## Close button
+			name ="bank_close"
+			spriteType = "GFX_close_button"
+			position = { x= 728 y = 38 }
+			Orientation = "UPPER_LEFT"
+		}	
+
+		instantTextboxType = { ## Title of the bank GUI
+			name = "political_title"
+			position = { x = 40 y = 35 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "the oba gui"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+		
+		instantTextboxType = { ## Basic information
+			name = "swi_gui_description"
+			position = { x = 60 y = 70 }
+			font = "default"
+			borderSize = {x = 0 y = 0}
+			text =  swi_basic_info       
+			maxWidth = 688
+			maxHeight = 500
+			fixedsize = yes
+		}
+		
+		#iconType = { ## Progress bar, to be moved into its own tab
+		#  name = "SWI_civs_progress_bar"
+		#  spriteType = "GFX_civ_bonus_progress_bar"
+		#  position = { x = 105 y = 406 }
+		#}
+		
+		buttonType ={ ## Civilian Power tab button
+			name ="CP_tab_button"
+			spriteType = "GFX_bank_category"
+			position = { x= 135 y = 355}
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextboxType = { ## CP tab name
+			name = "cp_tab_name"
+			position = { x= 167 y = 362}
+			font = "default"
+			borderSize = {x = 0 y = 0}
+			text = "Civilian Power"       
+			maxWidth = 49
+			maxHeight = 38
+			fixedsize = yes
+		}
+
+		buttonType ={ ## Milestones tab button
+			name ="Milestones_tab_button"
+			spriteType = "GFX_bank_category"
+			position = { x= 335 y = 355}
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextboxType = { ## Milestone tab name
+			name = "Milestone_tab_name"
+			position = { x= 352 y = 372}
+			font = "default"
+			borderSize = {x = 0 y = 0}
+			text = "Milestones"       
+			maxWidth = 78
+			maxHeight = 10
+			fixedsize = yes
+		}
+		
+		buttonType ={ ## Investors tab button
+			name ="Investors_tab_button"
+			spriteType = "GFX_bank_category"
+			position = { x= 535 y = 355}
+			Orientation = "UPPER_LEFT"
+		}
+		
+	}
+	
+	containerWindowType = {
+		name = "milestone_tab_swi"
+		position = { x = 0 y = 0}	
+		size = { width = 800 height= 650 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = { ## Just the background
+			name = "Background"		
+			quadTextureSprite ="GFX_scripted_gui_window_background"
+		}
+
+		buttonType ={ ## Back button
+			name ="milestone_back_button"
+			spriteType = "GFX_close_button"
+			position = { x= 728 y = 38 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextboxType = { ## Title of the milestones subtab
+			name = "political_title"
+			position = { x = 40 y = 35 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "the milestones tab"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+		
+		instantTextboxType = { ## Basic information (milestones)
+			name = "swi_gui_description"
+			position = { x = 60 y = 70 }
+			font = "default"
+			borderSize = {x = 0 y = 0}
+			text =  swi_milestones_info       
+			maxWidth = 688
+			maxHeight = 500
+			fixedsize = yes
+		}
+		
+		iconType = { ## Progress bar
+		  name = "SWI_civs_progress_bar"
+		  spriteType = "GFX_civ_bonus_progress_bar"
+		  position = { x = 100 y = 456 }
+		}
+		
+	}
+}

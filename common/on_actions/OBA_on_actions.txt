@@ -1,0 +1,44 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				set_variable = {
+					var = offshore_civs
+					value = 0
+				}
+				add_dynamic_modifier = {
+					modifier = offshore_civ_display
+				}
+			}
+			SWI = {
+				set_variable = {
+					var = total_offshore_civs
+					value = 0
+				}
+				
+				add_dynamic_modifier = {
+					modifier = swiss_offshore_buff
+				}
+				
+				remove_dynamic_modifier = {
+					modifier = offshore_civ_display
+				}
+			}
+		}
+	}
+	
+	#on_weekly = {
+	#	effect = {
+	#		every_country = {
+	#			if = {
+	#				limit = {
+	#					check_variable = {
+	#						offshore_civs > 19
+	#					}
+	#				}
+	#				set_country_flag = trade_country
+	#			}
+	#		}
+	#	}
+	#}
+}

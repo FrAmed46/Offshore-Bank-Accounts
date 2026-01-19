@@ -1,0 +1,11 @@
+offshore_civ_display = {
+    allowed = { always = yes }
+    visible = { always = yes }
+	icon = GFX_decision_generic_construction
+    custom_modifier_tooltip = offshore_civs_tooltip_tt
+  }
+  
+swiss_offshore_buff = {
+	icon = GFX_decision_generic_construction
+    research_speed_factor = scaled_high    # 0.5% per civ. Small tech boost
+  }

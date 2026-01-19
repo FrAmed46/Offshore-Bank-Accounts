@@ -1,0 +1,33 @@
+OBA_investment_category = {
+	priority = 1000
+	icon = GFX_decision_generic_construct_civ_factory
+	
+	visible_when_empty = yes
+	
+	allowed = {
+		NOT = {
+			original_tag = SWI
+		}
+	}
+	
+	visible = {
+		NOT = {
+			original_tag = SWI
+		}
+	}
+}
+
+OBA_Swiss_category = {
+	priority = 1000
+	icon = GFX_decision_generic_construct_civ_factory
+	
+	visible_when_empty = yes
+	
+	allowed = {
+		original_tag = SWI
+	}
+	
+	visible = {
+		original_tag = SWI
+	}
+}

@@ -1,0 +1,21 @@
+opinion_modifiers = {
+	OBA_forced_demand = {
+        value = -15      # Provides -15 diplomatic opinion that decays by 1.5 per month
+        decay = 1.5
+	}
+	
+	OBA_demand_rebuffed = {
+		value = -10   
+		decay = 1
+	}
+	
+	OBA_demands_rejected = {
+		value = -20
+		decay = 1.5
+	}
+	
+	OBA_seized_our_factories = {
+		value = -100
+		decay = 1
+	}
+}

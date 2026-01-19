@@ -1,0 +1,5 @@
+﻿l_english:
+ swi_basic_info:0 "Here you can see information about everything related to Offshore Bank Accounts. Basic information such as xxxxxxxx is displayed here and there are subtabs that have additional information such as §Gmilestones§! and xxxxxxxx.\n\n \n§YCivilian Power Tab§!: Is where the total amount of §YCivilian Power§! is displayed along with sources and additional increases. \n\n§GMilestone Tab§!: Is where is milestone progressbar is located, along with the individual milestones. \n\n§CInvestors Tab§!: Is where the current §Cinvestor§! countries are displayed. "
+ swi_milestones_info:0 "§GMilestones§! are activated after achieving a specific amount of §Ycivilian power§! and have many special benefits. \n\n\nHere you can see a bar showing your progress as well as individual milestones."
+ 
+ placeholder:0 "just a dump for text. §YCivilian Power§! is the total amount of civilian factories invested in you multiplied by 100. (in order to avoid issues with really small decimals) §YCivilian Power§! can also be increased in other ways, such as improving the "worth" of every invested civilian factory."

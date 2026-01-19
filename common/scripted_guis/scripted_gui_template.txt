@@ -1,0 +1,131 @@
+scripted_gui = {
+  swi_bank_button_scripted_gui = {
+    window_name = "bank_icon_swi"
+    context_type = player_context
+
+    visible = { ## Only shows for SWI, hasn't opened the bank gui
+		original_tag = SWI
+		NOT = {
+			has_country_flag = swi_bank_button_clicked
+		}
+    }
+
+    effects = {
+		bank_button_swi_click = {
+			set_country_flag = swi_bank_button_clicked
+			clr_country_flag = close_bank_button_clicked
+		}
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	}
+
+    properties = {
+    }
+
+    #ai_enabled = {
+	#	always = no # we will see for AI
+    #}
+
+    #ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	#ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  
+  swi_bank_ui_gui = {
+    window_name = "bank_ui_swi"
+    context_type = player_context
+
+    visible = { ## Only shows for SWI, has clicked the bank button and hasnt clicked the x button
+		original_tag = SWI
+		has_country_flag = swi_bank_button_clicked
+		NOT = {
+			has_country_flag = close_bank_button_clicked
+		}
+    }
+
+    effects = {
+		bank_close_click = { ## Closes the bank gui
+			clr_country_flag = swi_bank_button_clicked
+			set_country_flag = close_bank_button_clicked
+		}
+		
+		CP_tab_button_click = { ## Opens the Civilian Power subtab
+			clr_country_flag = swi_bank_button_clicked ## ATTENTION!! This line allows the open bank button to exist, REMOVE after creating the CP subtab
+			set_country_flag = close_bank_button_clicked
+			set_country_flag = cp_tab_bank_button_clicked
+		}
+		
+		Milestones_tab_button_click = { ## Opens the Milestone subtab
+			set_country_flag = close_bank_button_clicked
+			set_country_flag = milestone_tab_button_clicked
+			clr_country_flag = milestone_tab_close_button_clicked
+		}
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	}
+
+	properties = {
+	
+	}
+
+    #ai_enabled = {
+	#	always = no # we will see for AI
+    #}
+
+    #ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	#ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  
+  milestone_tab_scripted_gui = {
+	  window_name = "milestone_tab_swi"
+	  context_type = player_context
+	  
+	visible = { ## Only shows for SWI
+		original_tag = SWI
+		has_country_flag = milestone_tab_button_clicked
+		NOT = {
+			has_country_flag = milestone_tab_close_button_clicked
+		}
+    }
+		
+	effects = {
+		milestone_back_button_click = {
+			set_country_flag = milestone_tab_close_button_clicked
+			set_country_flag = swi_bank_button_clicked
+			clr_country_flag = close_bank_button_clicked
+		}
+	}
+	
+	properties = {
+		SWI_civs_progress_bar = {
+			frame = offshore_civs_bar  ##Same as offshore civs but clamped to 500
+		}
+	}
+ }
+}
+
