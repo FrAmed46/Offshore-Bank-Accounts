@@ -1,10 +1,10 @@
 OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE INVESTOR NATION-- FIXED
 
-	invest_1_civ = {
+	invest_2_civ = {
       icon = GFX_decision_generic_construction
       available = {
 			any_controlled_state = {
-				industrial_complex > 0
+				industrial_complex > 1
 			}
 			
 			if = {
@@ -20,18 +20,18 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 		}
 		
 	  fixed_random_seed = no
-      cost = 5
-	  days_remove = 5
+      cost = 15
+	  days_remove = 20
       complete_effect = {
 			add_to_variable = { 
 				var = offshore_civs 
-				value = 1 
+				value = 2 
 			}
 			custom_effect_tooltip = invest_fac_tt
 			SWI = {
 				add_to_variable = { 
 				var = total_offshore_civs 
-				value = 1 
+				value = 2 
 				}
 			}
         
@@ -41,11 +41,11 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 			ROOT = {
 				random_owned_state = {
 					limit = {
-					industrial_complex > 0
+					industrial_complex > 1
 					}
 				remove_building = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					}
 				}
 			
@@ -57,11 +57,11 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 	  
 	
 	
-	invest_5_civ = {
+	invest_6_civ = {
       icon = GFX_decision_generic_construction
       available = {
 		  any_controlled_state = {
-				industrial_complex > 4
+				industrial_complex > 5
 			}
 			
 			if = {
@@ -76,18 +76,18 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 			}
 		}
 	  fixed_random_seed = no
-      cost = 25
-	  days_remove = 10
+      cost = 30
+	  days_remove = 35
       complete_effect = {
 			add_to_variable = { 
 				var = offshore_civs 
-				value = 5
+				value = 6
 			}
 			custom_effect_tooltip = invest_fac_tt
 			SWI = {
 				add_to_variable = { 
 				var = total_offshore_civs 
-				value = 5
+				value = 6
 			    }
 			}
 			
@@ -97,26 +97,26 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 			ROOT = {
 				random_owned_state = {
 					limit = {
-					industrial_complex > 4
+					industrial_complex > 5
 					}
 				remove_building = {
 					type = industrial_complex
-					level = 5
+					level = 6
 				}
 				}
 				# Give offmap civ 
-				add_offsite_building = { type = industrial_complex level = 5 }
+				add_offsite_building = { type = industrial_complex level = 3 }
 			}
 		}
 	}
 	  
 	
 	
-	invest_10_civ = {
+	invest_12_civ = {
       icon = GFX_decision_generic_construction
       available = {
 		  any_controlled_state = {
-				industrial_complex > 9
+				industrial_complex > 11
 			}
 			
 			if = {
@@ -131,18 +131,18 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 			}
 		}
 	  fixed_random_seed = no
-      cost = 50
-	  days_remove = 15
+      cost = 70
+	  days_remove = 60
       complete_effect = {
 			add_to_variable = { 
 				var = offshore_civs 
-				value = 10 
+				value = 102
 			}
 			custom_effect_tooltip = invest_fac_tt
 			SWI = {
 				add_to_variable = { 
 				var = total_offshore_civs 
-				value = 10 
+				value = 12
 				}
 			}
 			OBA_scale_factories = yes
@@ -152,15 +152,15 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 			ROOT = {
 				random_owned_state = {
 					limit = {
-					industrial_complex > 9
+					industrial_complex > 11
 					}
 				 remove_building = {
 					type = industrial_complex
-					level = 10
+					level = 12
 				  }
 				}
 				# Give offmap civ 
-				add_offsite_building = { type = industrial_complex level = 10 }
+				add_offsite_building = { type = industrial_complex level = 6 }
 			}
 		}
 	}
