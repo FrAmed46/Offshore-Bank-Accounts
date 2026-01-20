@@ -20,9 +20,9 @@ Making the AI (intelligently) use the mod.
 CURRENTLY BALANCED AND TESTED FOR 1.16.* (Version before NCNS). UPDATE SOON!
 
 
-## Version 1.0.0 "New Arrivals"
+## Version 1.0.1 "New Arrivals"
 
-Initial release with limited features.
+added new demand to increase trade influence
 
 
 
