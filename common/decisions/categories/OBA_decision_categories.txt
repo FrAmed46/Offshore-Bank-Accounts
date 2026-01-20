@@ -31,3 +31,18 @@ OBA_Swiss_category = {
 		original_tag = SWI
 	}
 }
+
+OBA_Swiss_demands_category = {
+	priority = 1000
+	icon = GFX_decision_generic_construct_civ_factory
+	
+	visible_when_empty = yes
+	
+	allowed = {
+		original_tag = SWI
+	}
+	
+	visible = {
+		original_tag = SWI
+	}
+}
