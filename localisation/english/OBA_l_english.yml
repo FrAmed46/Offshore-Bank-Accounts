@@ -35,6 +35,7 @@ OBA_forced_demand:0 "Forced demand by switzerland"
 OBA_demand_rebuffed:0 "Malicious swiss demand rejected"
 OBA_demands_rejected:0 "Rejected our demands"
 OBA_seized_our_factories:0 "Seized our invested industry"
+OBA_trade_opinion_increase:0 "Increased trade influence"
 #Events
 OBA_event.1.t: "Switzerland demands we open up our trade!"
 OBA_event.1.desc: "Earlier today, the Swiss goverment demanded that we open our trade to the world, they present our recent investments into them as an argument."

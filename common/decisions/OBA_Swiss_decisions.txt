@@ -15,7 +15,7 @@ OBA_Swiss_category = {
 		complete_effect = {
 			add_dynamic_modifier = {
 				modifier = swiss_offshore_buff
-				force_update_dynamic_modifier = yes
+				force_update_dynamic_modifier = true
 			}
 		}
 	}
@@ -33,8 +33,8 @@ OBA_Swiss_category = {
 		cost = 0
 		
 		complete_effect = {
-			OBA_scale_factories = yes
-			force_update_dynamic_modifier = yes
+			OBA_scale_factories = true
+			force_update_dynamic_modifier = true
 		}
 	}
 	
@@ -162,7 +162,7 @@ OBA_Swiss_demands_category = {
 			hidden_effect = {
 			OBA_reset_total_investments = true
 			OBA_reset_foreign_investments = true 
-			force_update_dynamic_modifier = yes
+			force_update_dynamic_modifier = true
 			}
 		}
 	}	
@@ -182,8 +182,8 @@ OBA_Swiss_demands_category = {
 			}
 		}
 		
-		days_re_enable = 270
-		cost = FROM.offshore_civs
+		days_re_enable = 240
+		cost = multiply_variable = { FROM.offshore_civs value = 3 } ## testing this rn
 		
 		target_trigger = {
 			FROM = {
@@ -195,14 +195,15 @@ OBA_Swiss_demands_category = {
 		
 		complete_effect = {
 			    custom_effect_tooltip = swiss_seize_factory_tt 
-				add_opinion_modifier = {
-					target = SWI
-					modifier = OBA_seized_our_factories
+				FROM = {
+					set_country_flag = OBA_stole_civs
+					country_event = OBA_event.4
+					OBA_country_remove_investments = true
+					add_opinion_modifier = {
+						target = SWI
+						modifier = OBA_seized_our_factories
+					}
 				}
-				set_country_flag = OBA_stole_civs
-				
-				country_event = OBA_event.4
-				OBA_country_remove_investments = true
 		}
 	}
 
