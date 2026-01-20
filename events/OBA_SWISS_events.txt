@@ -1,6 +1,6 @@
 add_namespace = OBA_event
 
-country_event = {  ### SWISS DEMANDS TRADE
+country_event = {  ### SWISS DEMANDS WE OPEN UP TRADE
 	id = OBA_event.1
 	title = OBA_event.1.t
 	desc = OBA_event.1.desc
@@ -188,4 +188,67 @@ country_event = {  ### SWISS SEIZED OUR CIVS
 			
 			modifier = { is_major = yes add = 15 } ## Majors want in
 		}
+	  }
 	}
+
+country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES
+	id = OBA_event.5
+	title = OBA_event.5.t
+	desc = OBA_event.5.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OBA_event.5.a
+		SWI = { country_event = OBA_event.2 }
+		
+		add_opinion_modifier = {
+			target = SWI
+			modifier = OBA_trade_opinion_increase
+		}
+		
+		ai_chance = {
+			base = 25 ## less base chance to accept
+			
+			modifier = {
+				has_government = democratic
+				add = 40
+			}  ## Democracies are more open to trade demands
+			
+			
+			modifier = {
+				has_political_power < 50
+				add = 20 ## no pp = we must say yes
+			}
+		}
+	}
+	
+	option = {
+		name = OBA_event.5.b
+		SWI = { country_event = OBA_event.3 }
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = SWI
+			modifier = OBA_demand_rebuffed
+		}
+		reverse_add_opinion_modifier = {
+			target = SWI
+			modifier = OBA_demands_rejected
+		}
+		
+		ai_chance = {
+			base = 30 ## more likely to say no as base
+			
+			modifier = {
+				has_government = communism ## Non democratic ideologies won't be as accepting
+				add = 15
+			}
+			modifier = {
+				has_government = fascism ## Non democratic ideologies won't be as accepting
+				add = 15
+			}
+
+			modifier = { is_major = yes add = 10 } ## Majors won't be swayed so easily
+		}
+	}
+}

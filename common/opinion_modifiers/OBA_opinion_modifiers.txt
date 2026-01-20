@@ -4,18 +4,24 @@ opinion_modifiers = {
         decay = 1.5
 	}
 	
-	OBA_demand_rebuffed = {
-		value = -10   
+	OBA_demand_rebuffed = { 
+		value = -10    # Provides -10 diplomatic opinion that decays by 1 per month
 		decay = 1
 	}
 	
 	OBA_demands_rejected = {
-		value = -20
+		value = -20 # Provides -20 diplomatic opinion that decays by 1.5 per month
 		decay = 1.5
 	}
 	
 	OBA_seized_our_factories = {
-		value = -100
+		value = -100 # Provides -100 diplomatic opinion that decays by 1 per month
 		decay = 1
+	}
+	
+	OBA_trade_opinion_increase = {
+		trade = yes # Provides +150 trade influence for 6 months
+		value = 150
+		months = 6
 	}
 }

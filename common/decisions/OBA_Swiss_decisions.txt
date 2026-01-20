@@ -38,7 +38,51 @@ OBA_Swiss_category = {
 		}
 	}
 	
-	Swiss_force_trade = {
+	Swiss_same_ideology_investment_only = { ### self explanatory
+	
+		visible = {
+		
+			NOT = {
+				has_global_flag = OBA_same_ideo_investment
+			}
+		}	
+		
+		available = {
+			
+			NOT = {
+				has_global_flag = OBA_same_ideo_investment
+			}
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			set_global_flag = OBA_same_ideo_investment
+			custom_effect_tooltip = swiss_same_ideology_investment_only_tt
+		}
+	}
+	
+	Swiss_reenable_all_ideology_investment = { ### self explanatory 2
+	
+		visible = {
+			has_global_flag = OBA_same_ideo_investment
+		}	
+		
+		available = {
+			has_global_flag = OBA_same_ideo_investment
+		}
+		
+		cost = 0
+		
+		complete_effect = {
+			clr_global_flag = OBA_same_ideo_investment
+			custom_effect_tooltip = swiss_reenable_all_ideology_investment_tt
+		}
+	}
+}
+
+OBA_Swiss_demands_category = {
+	Swiss_force_trade = {  ### Forces a nation to go up a trade law
 		
 		visible = {
 			always = yes
@@ -65,8 +109,8 @@ OBA_Swiss_category = {
 		}
 		
 	}
-	
-	Swiss_steal_all_factories = {
+
+	Swiss_steal_all_factories = { ### Seizes all foreign civilian factories invested in Switzerland
 	
 		visible = {
 			check_variable = {
@@ -119,9 +163,9 @@ OBA_Swiss_category = {
 			force_update_dynamic_modifier = yes
 			}
 		}
-	}
-	
-	Swiss_steal_factory = {
+	}	
+
+	Swiss_steal_factory = { ### Seizes all foreign civilian factories invested in Switzerland by a certain country
 		visible = {
 			check_variable = {
 				total_offshore_civs > 0
@@ -159,46 +203,25 @@ OBA_Swiss_category = {
 		}
 	}
 
-	Swiss_same_ideology_investment_only = {
-	
+	swiss_demand_more_trade = { 
 		visible = {
-		
-			NOT = {
-				has_global_flag = OBA_same_ideo_investment
-			}
-		}	
-		
+			always = yes
+		}
 		available = {
+			always = yes
+		}
+		target_trigger = {
+			FROM = {
+				check_variable = {
+					offshore_civs > 9
+				}
+			}
+		}
 			
-			NOT = {
-				has_global_flag = OBA_same_ideo_investment
-			}
-		}
-		
-		cost = 0
-		
+		cost = 50
 		complete_effect = {
-			set_global_flag = OBA_same_ideo_investment
-			custom_effect_tooltip = swiss_same_ideology_investment_only_tt
-		}
-	}
-	
-	Swiss_reenable_all_ideology_investment = {
-	
-		visible = {
-			has_global_flag = OBA_same_ideo_investment
-		}	
-		
-		available = {
-			has_global_flag = OBA_same_ideo_investment
-		}
-		
-		cost = 0
-		
-		complete_effect = {
-			clr_global_flag = OBA_same_ideo_investment
-			custom_effect_tooltip = swiss_reenable_all_ideology_investment_tt
+			custom_effect_tooltip = swiss_demand_more_trade_tt
+			FROM = { country_event = OBA_event.1 }
 		}
 	}
 }
-
