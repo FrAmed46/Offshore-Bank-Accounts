@@ -82,7 +82,7 @@ OBA_Swiss_category = {
 }
 
 OBA_Swiss_demands_category = {
-	Swiss_force_trade = {  ### Forces a nation to go up a trade law
+	Swiss_force_trade = {  ### Forces a nation to go up to free trade
 		
 		visible = {
 			always = yes
@@ -94,6 +94,10 @@ OBA_Swiss_demands_category = {
 			FROM = {
 				check_variable = {
 					offshore_civs > 14
+				}
+
+				NOT = {
+					has_idea = free_trade
 				}
 			}
 		}
@@ -111,61 +115,61 @@ OBA_Swiss_demands_category = {
 		
 	}
 
-	Swiss_steal_all_factories = { ### Seizes all foreign civilian factories invested in Switzerland
-	
-		visible = {
-			check_variable = {
-				total_offshore_civs > 0
-			}
-		}
-		available = {
-			OR = {
-				has_government = communism
-				has_government = neutrality
-				has_government = fascism
-			}
-		}
-		
-		cost = total_offshore_civs
-		days_re_enable = 360
-		days_remove = 5
-		complete_effect = {
-			custom_effect_tooltip = swiss_seize_all_factories_tt 
-			add_named_threat = {
-				threat = 10
-				name = OBA_SWI_seized_all_factories
-			}
-			OBA_remove_investor_all
-			###add_timed_idea = {
-			#	OBA_seized_foreign_factories
-			#	days = total_offshore_civs
-			#}
-			every_country = { ## this whole part is broken, countries not getting event etc
-				limit = {
-					check_variable = {
-						ROOT.offshore_civs > 0
-					}
-				}
-				add_opinion_modifier = {
-					target = SWI
-					modifier = OBA_seized_our_factories
-				}
-				set_country_flag = OBA_stole_civs
-				
-				country_event = OBA_event.4
-				OBA_country_remove_investments = true
-			}
-		}
-		
-		remove_effect = {
-		custom_effect_tooltip = swiss_seize_factories_done_tt 
-			hidden_effect = {
-			OBA_reset_total_investments = true
-			OBA_reset_foreign_investments = true 
-			force_update_dynamic_modifier = true
-			}
-		}
-	}	
+	#Swiss_steal_all_factories = { ### Seizes all foreign civilian factories invested in Switzerland
+	#
+	#	visible = {
+	#		check_variable = {
+	#			total_offshore_civs > 0
+	#		}
+	#	}
+	#	available = {
+	#		OR = {
+	#			has_government = communism
+	#			has_government = neutrality
+	#			has_government = fascism
+	#		}
+	#	}
+	#	
+	#	cost = total_offshore_civs
+	#	days_re_enable = 360
+	#	days_remove = 5
+	#	complete_effect = {
+	#		custom_effect_tooltip = swiss_seize_all_factories_tt 
+	#		add_named_threat = {
+	#			threat = 10
+	#			name = OBA_SWI_seized_all_factories
+	#		}
+	#		OBA_remove_investor_all
+	#		###add_timed_idea = {
+	#		#	OBA_seized_foreign_factories
+	#		#	days = total_offshore_civs
+	#		#}
+	#		every_country = { ## this whole part is broken, countries not getting event etc
+	#			limit = {
+	#				check_variable = {
+	#					ROOT.offshore_civs > 0
+	#				}
+	#			}
+	#			add_opinion_modifier = {
+	#				target = SWI
+	#				modifier = OBA_seized_our_factories
+	#			}
+	#			set_country_flag = OBA_stole_civs
+	#			
+	#			country_event = OBA_event.4
+	#			OBA_country_remove_investments = true
+	#		}
+	#	}
+	#	
+	#	remove_effect = {
+	#	custom_effect_tooltip = swiss_seize_factories_done_tt 
+	#		hidden_effect = {
+	#		OBA_reset_total_investments = true
+	#		OBA_reset_foreign_investments = true 
+	#		force_update_dynamic_modifier = true
+	#		}
+	#	}
+	# }	
 
 	Swiss_steal_factory = { ### Seizes all foreign civilian factories invested in Switzerland by a certain country
 		visible = {
@@ -181,9 +185,11 @@ OBA_Swiss_demands_category = {
 				has_government = fascism
 			}
 		}
+
+		add_threat = 2
 		
 		days_re_enable = 240
-		cost = total_offshore_civs
+		cost = offshore_civs
 		
 		target_trigger = {
 			FROM = {
@@ -207,26 +213,26 @@ OBA_Swiss_demands_category = {
 		}
 	}
 
-	swiss_demand_more_trade = { 
-		visible = {
-			always = yes
-		}
-		available = {
-			always = yes
-		}
-		target_trigger = {
-			FROM = {
-				check_variable = {
-					offshore_civs > 9
-				}
-			}
-		}
-		
-		days_re_enable = 90
-		cost = 50
-		complete_effect = {
-			custom_effect_tooltip = swiss_demand_more_trade_tt
-			FROM = { country_event = OBA_event.5 }
-		}
-	}
+	#swiss_demand_more_trade = { 
+	#	visible = {
+	#		always = yes
+	#	}
+	#	available = {
+	#		always = yes
+	#	}
+	#	target_trigger = {
+	#		FROM = {
+	#			check_variable = {
+	#				offshore_civs > 9
+	#			}
+	#		}
+	#	}
+	#	
+	#	days_re_enable = 90
+	#	cost = 50
+	#	complete_effect = {
+	#		custom_effect_tooltip = swiss_demand_more_trade_tt
+	#		FROM = { country_event = OBA_event.5 }
+	#	}
+	#}
 }

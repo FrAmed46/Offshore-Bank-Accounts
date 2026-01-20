@@ -190,7 +190,7 @@ country_event = {  ### SWISS SEIZED OUR CIVS
 	  }
 	}
 
-country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES
+country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES (broken?)
 	id = OBA_event.5
 	title = OBA_event.5.t
 	desc = OBA_event.5.desc
