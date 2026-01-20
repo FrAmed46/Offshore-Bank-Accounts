@@ -202,7 +202,7 @@ country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES
 		SWI = { country_event = OBA_event.2 }
 		
 		add_opinion_modifier = {
-			target = ROOT
+			target = THIS ## trying this out
 			modifier = OBA_trade_opinion_increase
 		}
 		

@@ -140,10 +140,10 @@ OBA_Swiss_demands_category = {
 			#	OBA_seized_foreign_factories
 			#	days = total_offshore_civs
 			#}
-			every_country = {
+			every_country = { ## this whole part is broken, countries not getting event etc
 				limit = {
 					check_variable = {
-					offshore_civs > 0
+						ROOT.offshore_civs > 0
 					}
 				}
 				add_opinion_modifier = {
@@ -183,7 +183,7 @@ OBA_Swiss_demands_category = {
 		}
 		
 		days_re_enable = 240
-		cost = multiply_variable = { FROM.offshore_civs value = 3 } ## testing this rn
+		cost = total_offshore_civs
 		
 		target_trigger = {
 			FROM = {
