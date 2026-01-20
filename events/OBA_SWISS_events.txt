@@ -55,7 +55,6 @@ country_event = {  ### SWISS DEMANDS WE OPEN UP TRADE
 			target = SWI
 			modifier = OBA_demands_rejected
 		}
-		add_threat = 1
 		
 		ai_chance = {
 			base = 35 ## more likely to say no as base
@@ -203,7 +202,7 @@ country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES
 		SWI = { country_event = OBA_event.2 }
 		
 		add_opinion_modifier = {
-			target = SWI
+			target = ROOT
 			modifier = OBA_trade_opinion_increase
 		}
 		

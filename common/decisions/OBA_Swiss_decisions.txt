@@ -97,7 +97,8 @@ OBA_Swiss_demands_category = {
 				}
 			}
 		}
-			
+		
+		days_re_enable = 180
 		cost = 75
 		complete_effect = {
 			custom_effect_tooltip = swiss_force_trade_tt
@@ -126,6 +127,7 @@ OBA_Swiss_demands_category = {
 		}
 		
 		cost = total_offshore_civs
+		days_re_enable = 360
 		days_remove = 5
 		complete_effect = {
 			custom_effect_tooltip = swiss_seize_all_factories_tt 
@@ -180,6 +182,7 @@ OBA_Swiss_demands_category = {
 			}
 		}
 		
+		days_re_enable = 270
 		cost = FROM.offshore_civs
 		
 		target_trigger = {
@@ -217,11 +220,12 @@ OBA_Swiss_demands_category = {
 				}
 			}
 		}
-			
+		
+		days_re_enable = 90
 		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = swiss_demand_more_trade_tt
-			FROM = { country_event = OBA_event.1 }
+			FROM = { country_event = OBA_event.5 }
 		}
 	}
 }
