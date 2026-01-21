@@ -59,6 +59,11 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 
 		remove_effect = {
 		clr_country_flag = OBA_investing
+
+		SWI = {
+			force_update_dynamic_modifier = yes
+		}
+
 		}
 	}
 	  
@@ -120,6 +125,11 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 		}
 		remove_effect = {
 		clr_country_flag = OBA_investing
+
+		SWI = {
+			force_update_dynamic_modifier = yes
+		}
+
 		}
 	}
 	  
@@ -182,6 +192,11 @@ OBA_investment_category = {  ### CURRENT ISSUES: --NOTHING GETS REMOVED FROM THE
 		}
 		remove_effect = {
 		clr_country_flag = OBA_investing
+
+		SWI = {
+			force_update_dynamic_modifier = yes
+		}
+
 		}
 	}
 	  

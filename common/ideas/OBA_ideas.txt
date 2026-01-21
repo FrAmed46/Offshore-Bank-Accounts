@@ -12,7 +12,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = OBA_civs_seized
+			picture = civs_seized
 				
 			removal_cost = -1
 
@@ -36,7 +36,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = OBA_drift_democratic
+			picture = drift_democratic
 				
 			removal_cost = -1
 
@@ -56,7 +56,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = OBA_drift_neutrality
+			picture = drift_neutrality
 				
 			removal_cost = -1
 
@@ -76,7 +76,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = OBA_drift_fascism
+			picture = drift_fascism
 				
 			removal_cost = -1
 
@@ -96,7 +96,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = OBA_drift_communism
+			picture = drift_communism
 				
 			removal_cost = -1
 

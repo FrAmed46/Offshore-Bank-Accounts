@@ -7,5 +7,6 @@ offshore_civ_display = {
   
 swiss_offshore_buff = {
 	icon = GFX_decision_generic_construction
-    research_speed_factor = scaled_high    # 0.5% per civ. Small tech boost
+    research_speed_factor = scaled_low    # 0.25% per civ. Small tech boost
+    construction_speed_factor = scaled_high  # 1% per civ. Big building boost
   }

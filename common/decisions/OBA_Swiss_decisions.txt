@@ -199,6 +199,8 @@ OBA_Swiss_demands_category = {
 		}
 		
 		remove_effect = {
+
+			force_update_dynamic_modifier = yes
 				
 				add_named_threat = {
 				threat = 5
@@ -271,8 +273,10 @@ OBA_Swiss_demands_category = {
 		days_remove = 5
 		remove_effect = {
 			custom_effect_tooltip = swiss_influence_politics_tt
-			FROM = { 
-				country_event = OBA_event.6 
+			hidden_effect = {     
+				FROM = { 
+					country_event = OBA_event.6 
+				}
 			}
 
 			add_named_threat = {

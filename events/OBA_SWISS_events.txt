@@ -263,7 +263,7 @@ country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES
 
 country_event = { ### OUR POLITICS INFLUENCED BY SWISS
 	id = OBA_event.6
-	title = OBA_event.6
+	title = OBA_event.6.t
 	desc = OBA_event.6.desc
 	
 	is_triggered_only = yes
