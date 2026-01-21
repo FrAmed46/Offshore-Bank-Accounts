@@ -1,8 +1,10 @@
 ﻿l_english:
+    
 # Dynamic modifiers
 offshore_civ_display:0 "Civs in Switzerland"
 offshore_civs_tooltip_tt:0 "Civilian Factories invested in Switzerland: [?offshore_civs|Y]"
 swiss_offshore_buff:0 "Invested Factories"
+
 #Decisions
 OBA_investment_category:0 "Investments in Switzerland"
 OBA_investment_category_desc:0 "Here we can invest factories into Switzerland, for §R'safekeeping'§!."
@@ -24,18 +26,32 @@ Swiss_steal_all_factories:0 "Seize all foreign factories"
 swiss_seize_all_factories_tt:0 "No more foreign factories! they are all ours now!\n§RLocks you out of any further investment with your current investors§!.\n§RPisses off your investors§!§t A LOT§!."
 swiss_seize_factories_done_tt:0 "We will finish seizing all factories"
 Swiss_steal_factory:0 "Seize [FROM.GetAdjective] factories"
-swiss_seize_factory_tt:0 "Seize the factories of the [FROM.GetAdjective] Government"
+swiss_seize_factory_tt:0 "Seize the factories of the [FROM.GetAdjective] Government.\n§RLocks you out of any further investment with your investor.\nPisses off your investor§!§t A LOT§!"
 swiss_seize_factories_reqs_tt:0 "§G To do this you need:\n To not be democratic§!"
 Swiss_same_ideology_investment_only:0 "Only allow investment from same ideology nations"
 swiss_same_ideology_investment_only_tt:0 "This decision will disallow nations without the same ideology as us from investing in us. Useful for rp or just limiting investment spam."
 Swiss_reenable_all_ideology_investment:0 "Allow investment from any ideology"
 swiss_reenable_all_ideology_investment_tt:0 "Re allows all countries to invest in you, regardless of ideology."
+
 #Opinion modifiers
 OBA_forced_demand:0 "Forced demand by switzerland"
 OBA_demand_rebuffed:0 "Malicious swiss demand rejected"
 OBA_demands_rejected:0 "Rejected our demands"
 OBA_seized_our_factories:0 "Seized our invested industry"
 OBA_trade_opinion_increase:0 "Increased trade influence"
+
+#Ideas
+OBA_civs_seized:0 "Civilian factories seized"
+OBA_civs_seized_desc:0 "Our Civilian factories have been seized by the swiss. What a betrayal!"
+OBA_politics_influenced_dem:0 "Swiss political influence"
+OBA_politics_influenced_dem_desc:0 "Our country's ideolofy is being influenced towards democracy by the Swiss."
+OBA_politics_influenced_fas:0 "Swiss political influence"
+OBA_politics_influenced_fas_desc:0 "Our country's ideolofy is being influenced towards fascism by the Swiss."
+OBA_politics_influenced_neu:0 "Swiss political influence"
+OBA_politics_influenced_neu_desc:0 "Our country's ideolofy is being influenced towards neutrality by the Swiss."
+OBA_politics_influenced_com:0 "Swiss political influence"
+OBA_politics_influenced_com_desc:0 "Our country's ideolofy is being influenced towards communism by the Swiss."
+
 #Events
 OBA_event.1.t: "Switzerland demands we open up our trade!"
 OBA_event.1.desc: "Earlier today, the Swiss goverment demanded that we open our trade to the world, they present our recent investments into them as an argument."
@@ -59,9 +75,18 @@ OBA_event.5.t: "Switzerland demands trade privileges!"
 OBA_event.5.desc: "Earlier today, the Swiss government demanded we give them special trade rights, essentially increasing their trade influence in us. They argue our recent investments into them require resources too."
 OBA_event.5.a: "Have your privileges."
 OBA_event.5.b: "Who do they think they are?"
+
+OBA_event.6.t: "Our politics are being influenced!"
+OBA_event.6.desc: "the Swiss goverment has started influencing our politics toward their ideology. It will last for about a month"
+OBA_event.6.a: "Too far."
+
 #World Tension
-OBA_SWI_demanded_trade:0 "Switzerland has demanded a country open their market"
-OBA_SWI_seized_all_factories:0 "Switzerland seized all foreign factories"
+OBA_SWI_demanded_trade_threat:0 "Switzerland has demanded a country open their market"
+OBA_SWI_seized_all_factories_threat:0 "Switzerland seized all foreign factories"
+OBA_SWI_seized_factories_threat:0 "Switzerland seized foreign factories of a country"
+OBA_SWI_demanded_privileges_threat:0 "Switzerland has demanded trade privileges with a country"
+OBA_SWI_influenced_politics_threat:0 "Switzerland influenced a foreign country's politics'"
 # FLAGS
 OBA_stole_civs:0 "Switzerland stole our industry"
 OBA_same_ideo_investment:0 "Switzerland has closed investment from nations with a different ideology than it."
+OBA_investing:0 "Investing in Switzerland"

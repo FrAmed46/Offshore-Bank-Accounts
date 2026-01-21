@@ -109,19 +109,17 @@ country_event = {  ### SWISS SEIZED OUR CIVS
 		name = OBA_event.4.a
 	    
 		add_political_power = -50
-		add_stability = -0.05
-		add_war_support = 0.1
-		###add_timed_idea = {
-		#	idea = OBA_civs_seized
-		#	days = 30
-		#}
+		add_timed_idea = {
+			idea = OBA_civs_seized
+			days = 30
+		}
 		
 		ai_chance = {
-			base = 35 ## More likely that the ai will cry about it
+			base = 45 ## More likely that the ai will cry about it
 			
 			modifier = {  ## Lessened chance to invade if they have almnost nothing in swizterland
 				check_variable = {
-					offshore_civs < 4
+					offshore_civs < 5
 				}
 				add = 10
 			}
@@ -139,9 +137,11 @@ country_event = {  ### SWISS SEIZED OUR CIVS
 	option = {
 		name = OBA_event.4.b
 		
-		add_political_power = -25
-		add_stability = -0.025
 		add_war_support = 0.2
+		add_timed_idea = {
+			idea = OBA_civs_seized
+			days = 30
+		}
 		create_wargoal = {
 			type = puppet_wargoal_focus
 			target = SWI
@@ -184,13 +184,22 @@ country_event = {  ### SWISS SEIZED OUR CIVS
 				}
 				add = 15 
 			}
+
+			modifier = {
+				has_government = communism ## Non democratic ideologies get pissed
+				add = 15
+			}
+			modifier = {
+				has_government = fascism ## Non democratic ideologies get pissed
+				add = 15
+			}
 			
 			modifier = { is_major = yes add = 15 } ## Majors want in
 		}
 	  }
 	}
 
-country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES (broken?)
+country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES 
 	id = OBA_event.5
 	title = OBA_event.5.t
 	desc = OBA_event.5.desc
@@ -202,7 +211,7 @@ country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES (broken?)
 		SWI = { country_event = OBA_event.2 }
 		
 		add_opinion_modifier = {
-			target = THIS ## trying this out
+			target = SWI
 			modifier = OBA_trade_opinion_increase
 		}
 		
@@ -248,6 +257,23 @@ country_event = {  ### SWISS DEMANDS WE GIVE THEM TRADE PRIVILEGES (broken?)
 			}
 
 			modifier = { is_major = yes add = 10 } ## Majors won't be swayed so easily
+		}
+	}
+}
+
+country_event = { ### OUR POLITICS INFLUENCED BY SWISS
+	id = OBA_event.6
+	title = OBA_event.6
+	desc = OBA_event.6.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OBA_event.6.a
+		
+		add_opinion_modifier = {
+			target = SWI
+			modifier = OBA_forced_demand
 		}
 	}
 }

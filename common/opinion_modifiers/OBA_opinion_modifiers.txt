@@ -20,8 +20,8 @@ opinion_modifiers = {
 	}
 	
 	OBA_trade_opinion_increase = {
-		trade = yes # Provides +150 trade influence for 6 months
-		value = 150
-		months = 6
+		trade = yes # Provides +100 trade influence for 3 months
+		value = 100
+		months = 3
 	}
 }
