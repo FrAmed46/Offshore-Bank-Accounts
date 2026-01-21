@@ -1,7 +1,7 @@
 spriteTypes = {	## Assume this closes, i cant put the closing bracket in image
 
 	SpriteType = {
-		name = "GFX_idea_civs_seized" ## THE GFX_idea_ part is NEEDED. Don't confuse it tho, doesnt exist anywhere else
+		name = "GFX_idea_civs_seized" ## THE GFX_ maybe the idea_ too part is NEEDED. Don't confuse it tho, doesnt exist anywhere else
 		texturefile = "gfx/interface/ideas/seized_factories_icon.dds" ## gfx/interface/ideas is the filepath. xxx.dds should be your idea name, .dds is the file extension (dds file, dont forget to put it)
 	}
 

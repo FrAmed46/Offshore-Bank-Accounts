@@ -111,7 +111,7 @@ country_event = {  ### SWISS SEIZED OUR CIVS
 		add_political_power = -50
 		add_timed_idea = {
 			idea = OBA_civs_seized
-			days = 30
+			days = 90
 		}
 		
 		ai_chance = {
