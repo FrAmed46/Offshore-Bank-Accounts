@@ -20,11 +20,16 @@ Making the AI (intelligently) use the mod.
 CURRENTLY BALANCED AND TESTED FOR 1.16.* (Version before NCNS). UPDATE SOON!
 
 
-## Version 1.0.2 "New Arrivals"
+# Version 1.1.0 "First Major Update"
+#### Re enabled trade privileges demand. 
+#### Seizing someone's factories now actually removes the offmap factories and applies a new debuff.
+#### New influence politics hostile action, allowing you to slowly flip countries to your current ideology.
+#### Added events for the trade privileges demand and the new hostile action.
+#### You can only invest in 1 quantity of factories at a time (2,6 or 12)
+#### Reseach speed buff from total invested civs removed (had weird issues since the number was too small)
+#### Added construction speed buff from total invested civs
+###### NATIONAL SPIRIT ICONS STILL WIP
 
-disabled trade privileges demand (temporarily)
-disabled seizing all factories at once (temporarily)
-force free trade only possible if target doesnt already have free trade.
 
 
 
