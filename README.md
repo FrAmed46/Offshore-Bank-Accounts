@@ -20,10 +20,11 @@ Making the AI (intelligently) use the mod.
 CURRENTLY BALANCED AND TESTED FOR 1.16.* (Version before NCNS). UPDATE SOON!
 
 
-## Version 1.0.1 "New Arrivals"
+## Version 1.0.2 "New Arrivals"
 
-added new demand to increase trade influence
-
+disabled trade privileges demand (temporarily)
+disabled seizing all factories at once (temporarily)
+force free trade only possible if target doesnt already have free trade.
 
 
 
